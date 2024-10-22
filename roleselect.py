@@ -46,7 +46,7 @@ async def role_panel(ctx):
     custom_emoji_callisto = discord.utils.get(guild.emojis, name="callisto")
     custom_emoji_vetion = discord.utils.get(guild.emojis, name="vetion")
     custom_emoji_venenatis = discord.utils.get(guild.emojis, name="venenatis")
-    custom_emoji_ffa = "👤"  # Bust in Silhouette Emoji
+    custom_emoji_huey = discord.utils.get(guild.emojis, name="hueycoatl")
 
     button_tob = Button(label="TOB", style=discord.ButtonStyle.secondary, emoji=custom_emoji_tob)
     button_cox = Button(label="COX", style=discord.ButtonStyle.secondary, emoji=custom_emoji_cox)
@@ -63,7 +63,7 @@ async def role_panel(ctx):
     button_callisto = Button(label="Callisto", style=discord.ButtonStyle.secondary, emoji=custom_emoji_callisto)
     button_vetion = Button(label="Vet'ion", style=discord.ButtonStyle.secondary, emoji=custom_emoji_vetion)
     button_venenatis = Button(label="Venenatis", style=discord.ButtonStyle.secondary, emoji=custom_emoji_venenatis)
-    button_ffa = Button(label="FFA", style=discord.ButtonStyle.secondary, emoji=custom_emoji_ffa)  # FFA Button
+    button_huey = Button(label="Hueycoatl", style=discord.ButtonStyle.secondary, emoji=custom_emoji_huey)
 
     view = View(timeout=None)
     view.add_item(button_tob)
@@ -81,7 +81,7 @@ async def role_panel(ctx):
     view.add_item(button_callisto)
     view.add_item(button_vetion)
     view.add_item(button_venenatis)
-    view.add_item(button_ffa)  # Add FFA Button to the view
+    view.add_item(button_huey)
 
     async def button_callback(interaction):
         role_name = interaction.data['custom_id']
@@ -103,7 +103,7 @@ async def role_panel(ctx):
         await feedback_message.delete(delay=1)
 
     buttons = [button_tob, button_cox, button_toa, button_hmt, button_cm, button_extoa, button_graardor, button_sara, button_zammy, button_arma, button_nex, button_corp, button_callisto, button_vetion, button_venenatis, button_ffa]
-    role_names = ["Theatre of Blood - TOB", "Chambers of Xeric - COX", "Tombs of Amascut - TOA", "Theatre of Blood Hard Mode - HMT", "Chambers of Xeric Challenge Mode - COX CMs", "Tombs of Amascut Expert - TOA EXP", "General Graardor - Bandos GWD", "Commander Zilyana - Saradomin GWD", "K'ril Tsutsaroth - Zamorak GWD", "Kree'arra - Armadyl GWD", "Nex", "Corporeal Beast - Corp", "Callisto", "Vet'ion", "Venenatis", "Free For All - FFA"]
+    role_names = ["Theatre of Blood - TOB", "Chambers of Xeric - COX", "Tombs of Amascut - TOA", "Theatre of Blood Hard Mode - HMT", "Chambers of Xeric Challenge Mode - COX CMs", "Tombs of Amascut Expert - TOA EXP", "General Graardor - Bandos GWD", "Commander Zilyana - Saradomin GWD", "K'ril Tsutsaroth - Zamorak GWD", "Kree'arra - Armadyl GWD", "Nex", "Corporeal Beast - Corp", "Callisto", "Vet'ion", "Venenatis", "Hueycoatl"]
 
     for button, role_name in zip(buttons, role_names):
         button.custom_id = role_name
