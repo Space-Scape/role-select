@@ -102,7 +102,7 @@ async def role_panel(ctx):
         await interaction.response.defer()
         await feedback_message.delete(delay=1)
 
-    buttons = [button_tob, button_cox, button_toa, button_hmt, button_cm, button_extoa, button_graardor, button_sara, button_zammy, button_arma, button_nex, button_corp, button_callisto, button_vetion, button_venenatis, button_ffa]
+    buttons = [button_tob, button_cox, button_toa, button_hmt, button_cm, button_extoa, button_graardor, button_sara, button_zammy, button_arma, button_nex, button_corp, button_callisto, button_vetion, button_venenatis, button_huey]
     role_names = ["Theatre of Blood - TOB", "Chambers of Xeric - COX", "Tombs of Amascut - TOA", "Theatre of Blood Hard Mode - HMT", "Chambers of Xeric Challenge Mode - COX CMs", "Tombs of Amascut Expert - TOA EXP", "General Graardor - Bandos GWD", "Commander Zilyana - Saradomin GWD", "K'ril Tsutsaroth - Zamorak GWD", "Kree'arra - Armadyl GWD", "Nex", "Corporeal Beast - Corp", "Callisto", "Vet'ion", "Venenatis", "Hueycoatl"]
 
     for button, role_name in zip(buttons, role_names):
