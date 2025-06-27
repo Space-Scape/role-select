@@ -52,7 +52,7 @@ async def role_panel(ctx):
     custom_emoji_event = discord.utils.get(guild.emojis, name="event")
     custom_emoji_sotw = discord.utils.get(guild.emojis, name="sotw")
     custom_emoji_botw = discord.utils.get(guild.emojis, name="botw")
-    custom_emoji_sangsunday = discord.utils.get(guild.emojis, name="sanguinesunday")
+    custom_emoji_sangsunday = discord.utils.get(guild.emojis, name="sanguine_sunday")
 
     button_tob = Button(label="TOB", style=discord.ButtonStyle.secondary, emoji=custom_emoji_tob)
     button_cox = Button(label="COX", style=discord.ButtonStyle.secondary, emoji=custom_emoji_cox)
