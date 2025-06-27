@@ -52,6 +52,7 @@ async def role_panel(ctx):
     custom_emoji_event = discord.utils.get(guild.emojis, name="event")
     custom_emoji_sotw = discord.utils.get(guild.emojis, name="sotw")
     custom_emoji_botw = discord.utils.get(guild.emojis, name="botw")
+    custom_emoji_sangsunday = discord.utils.get(guild.emojis, name="sanguinesunday")
 
     button_tob = Button(label="TOB", style=discord.ButtonStyle.secondary, emoji=custom_emoji_tob)
     button_cox = Button(label="COX", style=discord.ButtonStyle.secondary, emoji=custom_emoji_cox)
@@ -74,6 +75,7 @@ async def role_panel(ctx):
     button_event = Button(label="Events", style=discord.ButtonStyle.secondary, emoji=custom_emoji_event)
     button_sotw = Button(label="Skill of the Week", style=discord.ButtonStyle.secondary, emoji=custom_emoji_sotw)
     button_botw = Button(label="Boss of the Week", style=discord.ButtonStyle.secondary, emoji=custom_emoji_botw)
+    button_sangsunday = Button(label="Sanguine Sunday", style=discord.ButtonStyle.secondary, emoji=custom_emoji_sangsunday)
 
     view = View(timeout=None)
     view.add_item(button_tob)
@@ -94,6 +96,7 @@ async def role_panel(ctx):
     view.add_item(button_huey)
     view.add_item(button_yama)
     view.add_item(button_raffle)
+    view.add_item(button_sangsunday)
     view.add_item(button_event)
     view.add_item(button_sotw)
     view.add_item(button_botw)
@@ -117,8 +120,8 @@ async def role_panel(ctx):
         await interaction.response.defer()
         await feedback_message.delete(delay=1)
 
-    buttons = [button_tob, button_cox, button_toa, button_hmt, button_cm, button_extoa, button_graardor, button_sara, button_zammy, button_arma, button_nex, button_corp, button_callisto, button_vetion, button_venenatis, button_huey, button_yama, button_raffle, button_event, button_sotw, button_botw]
-    role_names = ["Theatre of Blood - TOB", "Chambers of Xeric - COX", "Tombs of Amascut - TOA", "Theatre of Blood Hard Mode - HMT", "Chambers of Xeric Challenge Mode - COX CMs", "Tombs of Amascut Expert - TOA EXP", "General Graardor - Bandos GWD", "Commander Zilyana - Saradomin GWD", "K'ril Tsutsaroth - Zamorak GWD", "Kree'arra - Armadyl GWD", "Nex", "Corporeal Beast - Corp", "Callisto", "Vet'ion", "Venenatis", "Hueycoatl", "Yama", "Raffles", "Events", "Skill of the Week", "Boss of the Week"]
+    buttons = [button_tob, button_cox, button_toa, button_hmt, button_cm, button_extoa, button_graardor, button_sara, button_zammy, button_arma, button_nex, button_corp, button_callisto, button_vetion, button_venenatis, button_huey, button_yama, button_sangsunday, button_raffle, button_event, button_sotw, button_botw]
+    role_names = ["Theatre of Blood - TOB", "Chambers of Xeric - COX", "Tombs of Amascut - TOA", "Theatre of Blood Hard Mode - HMT", "Chambers of Xeric Challenge Mode - COX CMs", "Tombs of Amascut Expert - TOA EXP", "General Graardor - Bandos GWD", "Commander Zilyana - Saradomin GWD", "K'ril Tsutsaroth - Zamorak GWD", "Kree'arra - Armadyl GWD", "Nex", "Corporeal Beast - Corp", "Callisto", "Vet'ion", "Venenatis", "Hueycoatl", "Yama", "Sanguine Sunday", "Raffles", "Events", "Skill of the Week", "Boss of the Week"]
 
     for button, role_name in zip(buttons, role_names):
         button.custom_id = role_name
